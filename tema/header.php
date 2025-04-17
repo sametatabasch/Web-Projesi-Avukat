@@ -17,12 +17,7 @@
                                         <li><a class="active" href="/">Ana Sayfa</a></li>
                                         <li><a href="/?sayfa=hakkimda">Hakkımızda</a></li>
                                         <li><a href="/?sayfa=faaliyet_alanlari">Faaliyet Alanları</a></li>
-                                        <li><a href="#">blog <i class="ti-angle-down"></i></a>
-                                            <ul class="submenu">
-                                                <li><a href="blog.html">Yazılarımız</a></li>
-                                                <li><a href="single-blog.html">Tek yazı</a></li>
-                                            </ul>
-                                        </li>
+                                        <li><a href="/?sayfa=blog">Yazılarımız </a></li>
                                         <li><a href="#">Sayfalar <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
                                                 <li><a href="elements.html">Tasarım Elemanları</a></li>
