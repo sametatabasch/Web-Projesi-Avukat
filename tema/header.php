@@ -14,16 +14,11 @@
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a class="active" href="/">Ana Sayfa</a></li>
-                                        <li><a href="/?sayfa=hakkimda">Hakkımızda</a></li>
-                                        <li><a href="/?sayfa=faaliyet_alanlari">Faaliyet Alanları</a></li>
-                                        <li><a href="/?sayfa=blog">Yazılarımız </a></li>
-                                        <li><a href="#">Sayfalar <i class="ti-angle-down"></i></a>
-                                            <ul class="submenu">
-                                                <li><a href="elements.html">Tasarım Elemanları</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="/?sayfa=iletisim">İletişim</a></li>
+                                        <li><a class="<?= $sayfa=="index" ? 'active':'' ?>" href="/">Ana Sayfa</a></li>
+                                        <li><a class="<?= $sayfa=="hakkimda" ? 'active':'' ?>" href="/?sayfa=hakkimda">Hakkımızda</a></li>
+                                        <li><a class="<?= $sayfa=="faaliyet_alanlari" ? 'active':'' ?>" href="/?sayfa=faaliyet_alanlari">Faaliyet Alanları</a></li>
+                                        <li><a class="<?= $sayfa=="blog" ? 'active':'' ?>" href="/?sayfa=blog">Yazılarımız </a></li>
+                                        <li><a class="<?= $sayfa=="iletisim" ? 'active':'' ?>" href="/?sayfa=iletisim">İletişim</a></li>
                                     </ul>
                                 </nav>
                             </div>

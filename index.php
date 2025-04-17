@@ -9,7 +9,8 @@ define("SAYFALAR",
     'blog_tek' => "sayfalar/blog_tek.php",
     'bulunamadi' => "sayfalar/bulunamadi.php",
 
-])
+]);
+$sayfa = $_GET['sayfa'] ?? "index";
 ?>
 <!doctype html>
 <html class="no-js" lang="zxx">
@@ -31,7 +32,7 @@ define("SAYFALAR",
     <!-- header-end -->
 
     <?php
-        $sayfa = $_GET['sayfa'] ?? "index";
+        
         
         include_once SAYFALAR[$sayfa] ?? "sayfalar/bulunamadi.php";
     ?>
