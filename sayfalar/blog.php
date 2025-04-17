@@ -1,135 +1,86 @@
-    <!-- bradcam_area_start  -->
-    <div class="bradcam_area">
-        <div class="bradcam_inner bradcam_bg_2 d-flex align-items-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="bradcam_text text-center">
-                            <h3>Blog </h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- bradcam_area_end  -->
+    
 
     <!--================Blog Area =================-->
     <section class="blog_area section-padding">
         <div class="container">
+        <h2 class="text-center mb-3">Blog </h2>
             <div class="row">
                 <div class="col-lg-8 mb-5 mb-lg-0">
                     <div class="blog_left_sidebar">
-                        <article class="blog_item">
+                    <?php 
+                    /**
+                     * bu değişken veri tabanın çekilen verileri simüle etmek için oluşturuluyor
+                     */
+                    $posts = [
+                        [
+                            'link'=>"/?sayfa=blog_tek&id=1",
+                            'title' => "Tutuklamalar",
+                            'date' => ['day' => 15, 'month' => "Mart"],
+                            'img' => "img/blog/single_blog_1.png",
+                            'excerpt' => "Yazının özetini burada yazarsın artık.",
+                            'author' => "Samet ATABAŞ",
+                            'comment_count' => 2
+                        ],
+                        [
+                            'link'=>"/?sayfa=blog_tek&id=2",
+                            'title' => "Yeni Avukatlık Kanunu",
+                            'date' => ['day' => 20, 'month' => "Nisan"],
+                            'img' => "img/blog/single_blog_2.png",
+                            'excerpt' => "Yeni Avukatlık Kanunu ile ilgili önemli değişiklikler burada.",
+                            'author' => "Samet ATABAŞ",
+                            'comment_count' => 5
+                        ],
+                        [
+                            'link'=>"/?sayfa=blog_tek&id=3",
+                            'title' => "İcra Takiplerinde Yenilikler",
+                            'date' => ['day' => 5, 'month' => "Mayıs"],
+                            'img' => "img/blog/single_blog_3.png",
+                            'excerpt' => "İcra takip süreçlerinde yapılan değişiklikler anlatılıyor.",
+                            'author' => "Samet ATABAŞ",
+                            'comment_count' => 3
+                        ],
+                        [
+                            'link'=>"/?sayfa=blog_tek&id=4",
+                            'title' => "Ceza Hukukunda Güncellemeler",
+                            'date' => ['day' => 12, 'month' => "Haziran"],
+                            'img' => "img/blog/single_blog_4.png",
+                            'excerpt' => "Ceza hukukunda dikkat çeken güncellemeler bu yazıda.",
+                            'author' => "Samet ATABAŞ",
+                            'comment_count' => 7
+                        ],
+                        [
+                            'link'=>"/?sayfa=blog_tek&id=5",
+                            'title' => "Boşanma Davalarında Yeni Yaklaşımlar",
+                            'date' => ['day' => 28, 'month' => "Temmuz"],
+                            'img' => "img/blog/single_blog_5.png",
+                            'excerpt' => "Boşanma davalarındaki yeni uygulamalar ele alınıyor.",
+                            'author' => "Samet ATABAŞ",
+                            'comment_count' => 4
+                        ]
+                    ];
+                     foreach($posts as $post) :
+                    ?>
+                    <article class="blog_item">
                             <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="img/blog/single_blog_1.png" alt="">
+                                <img class="card-img rounded-0" src="<?=$post['img']?>" alt="">
                                 <a href="#" class="blog_item_date">
-                                    <h3>15</h3>
-                                    <p>Jan</p>
+                                    <h3><?=$post['date']['day']?></h3>
+                                    <p><?=$post['date']['month']?></p>
                                 </a>
                             </div>
 
                             <div class="blog_details">
-                                <a class="d-inline-block" href="single-blog.html">
-                                    <h2>Google inks pact for new 35-storey office</h2>
+                                <a class="d-inline-block" href="<?=$post['link']?>">
+                                    <h2><?=$post['title']?></h2>
                                 </a>
-                                <p>That dominion stars lights dominion divide years for fourth have don't stars is that
-                                    he earth it first without heaven in place seed it second morning saying.</p>
+                                <p><?=$post['excerpt']?></p>
                                 <ul class="blog-info-link">
-                                    <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
-                                    <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                                    <li><a href="#"><i class="fa fa-user"></i> <?=$post['author']?></a></li>
+                                    <li><a href="#"><i class="fa fa-comments"></i> <?=$post['comment_count']?> Yorum</a></li>
                                 </ul>
                             </div>
                         </article>
-
-                        <article class="blog_item">
-                            <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="img/blog/single_blog_2.png" alt="">
-                                <a href="#" class="blog_item_date">
-                                    <h3>15</h3>
-                                    <p>Jan</p>
-                                </a>
-                            </div>
-
-                            <div class="blog_details">
-                                <a class="d-inline-block" href="single-blog.html">
-                                    <h2>Google inks pact for new 35-storey office</h2>
-                                </a>
-                                <p>That dominion stars lights dominion divide years for fourth have don't stars is that
-                                    he earth it first without heaven in place seed it second morning saying.</p>
-                                <ul class="blog-info-link">
-                                    <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
-                                    <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
-                                </ul>
-                            </div>
-                        </article>
-
-                        <article class="blog_item">
-                            <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="img/blog/single_blog_3.png" alt="">
-                                <a href="#" class="blog_item_date">
-                                    <h3>15</h3>
-                                    <p>Jan</p>
-                                </a>
-                            </div>
-
-                            <div class="blog_details">
-                                <a class="d-inline-block" href="single-blog.html">
-                                    <h2>Google inks pact for new 35-storey office</h2>
-                                </a>
-                                <p>That dominion stars lights dominion divide years for fourth have don't stars is that
-                                    he earth it first without heaven in place seed it second morning saying.</p>
-                                <ul class="blog-info-link">
-                                    <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
-                                    <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
-                                </ul>
-                            </div>
-                        </article>
-
-                        <article class="blog_item">
-                            <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="img/blog/single_blog_4.png" alt="">
-                                <a href="#" class="blog_item_date">
-                                    <h3>15</h3>
-                                    <p>Jan</p>
-                                </a>
-                            </div>
-
-                            <div class="blog_details">
-                                <a class="d-inline-block" href="single-blog.html">
-                                    <h2>Google inks pact for new 35-storey office</h2>
-                                </a>
-                                <p>That dominion stars lights dominion divide years for fourth have don't stars is that
-                                    he earth it first without heaven in place seed it second morning saying.</p>
-                                <ul class="blog-info-link">
-                                    <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
-                                    <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
-                                </ul>
-                            </div>
-                        </article>
-
-                        <article class="blog_item">
-                            <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="img/blog/single_blog_5.png" alt="">
-                                <a href="#" class="blog_item_date">
-                                    <h3>15</h3>
-                                    <p>Jan</p>
-                                </a>
-                            </div>
-
-                            <div class="blog_details">
-                                <a class="d-inline-block" href="single-blog.html">
-                                    <h2>Google inks pact for new 35-storey office</h2>
-                                </a>
-                                <p>That dominion stars lights dominion divide years for fourth have don't stars is that
-                                    he earth it first without heaven in place seed it second morning saying.</p>
-                                <ul class="blog-info-link">
-                                    <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
-                                    <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
-                                </ul>
-                            </div>
-                        </article>
-
+                    <?php endforeach; ?>
                         <nav class="blog-pagination justify-content-center d-flex">
                             <ul class="pagination">
                                 <li class="page-item">
