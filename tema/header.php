@@ -16,7 +16,7 @@
                                     <ul id="navigation">
                                         <li><a class="active" href="/">Ana Sayfa</a></li>
                                         <li><a href="/?sayfa=hakkimda">Hakkımızda</a></li>
-                                        <li><a href="/?sayfa=faliyet_alalari">Faliyet Alanları</a></li>
+                                        <li><a href="/?sayfa=faaliyet_alanlari">Faaliyet Alanları</a></li>
                                         <li><a href="#">blog <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
                                                 <li><a href="blog.html">Yazılarımız</a></li>
