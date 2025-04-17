@@ -1,8 +1,13 @@
 <?php 
 define("SAYFALAR",
 [
-    'index' =>"sayfalar/index.php",
-    'iletisim' =>"sayfalar/iletisim.php",
+    'index' => "sayfalar/index.php",
+    'iletisim' => "sayfalar/iletisim.php",
+    'hakkimda' => "sayfalar/hakkimda.php",
+    'faaliyet_alanlari' => "sayfalar/faaliyet_alanlari.php",
+    'blog' => "sayfalar/blog.php",
+    'blog_tek' => "sayfalar/blog_tek.php",
+    'bulunamadi' => "sayfalar/bulunamadi.php",
 
 ])
 ?>
