@@ -1,5 +1,6 @@
-    
-
+<?php
+include_once "../veriler.php";
+?>
     <!--================Blog Area =================-->
     <section class="blog_area section-padding">
         <div class="container">
@@ -8,56 +9,7 @@
                 <div class="col-lg-8 mb-5 mb-lg-0">
                     <div class="blog_left_sidebar">
                     <?php 
-                    /**
-                     * bu değişken veri tabanın çekilen verileri simüle etmek için oluşturuluyor
-                     */
-                    $posts = [
-                        [
-                            'link'=>"/?sayfa=blog_tek&id=1",
-                            'title' => "Eğlence Kanunu Düzenlendi",
-                            'date' => ['day' => 15, 'month' => "Mart"],
-                            'img' => "img/blog/single_blog_1.png",
-                            'excerpt' => "Yazının özetini burada yazarsın artık.",
-                            'author' => "Samet ATABAŞ",
-                            'comment_count' => 2
-                        ],
-                        [
-                            'link'=>"/?sayfa=blog_tek&id=2",
-                            'title' => "sosyal Medya Kanunu",
-                            'date' => ['day' => 20, 'month' => "Nisan"],
-                            'img' => "img/blog/single_blog_2.png",
-                            'excerpt' => "Yeni Avukatlık Kanunu ile ilgili önemli değişiklikler burada.",
-                            'author' => "Samet ATABAŞ",
-                            'comment_count' => 5
-                        ],
-                        [
-                            'link'=>"/?sayfa=blog_tek&id=3",
-                            'title' => "İcra Takiplerinde Yenilikler",
-                            'date' => ['day' => 5, 'month' => "Mayıs"],
-                            'img' => "img/blog/single_blog_3.png",
-                            'excerpt' => "İcra takip süreçlerinde yapılan değişiklikler anlatılıyor.",
-                            'author' => "Samet ATABAŞ",
-                            'comment_count' => 3
-                        ],
-                        [
-                            'link'=>"/?sayfa=blog_tek&id=4",
-                            'title' => "Ceza Hukukunda Güncellemeler",
-                            'date' => ['day' => 12, 'month' => "Haziran"],
-                            'img' => "img/blog/single_blog_4.png",
-                            'excerpt' => "Ceza hukukunda dikkat çeken güncellemeler bu yazıda.",
-                            'author' => "Samet ATABAŞ",
-                            'comment_count' => 7
-                        ],
-                        [
-                            'link'=>"/?sayfa=blog_tek&id=5",
-                            'title' => "Boşanma Davalarında Yeni Yaklaşımlar",
-                            'date' => ['day' => 28, 'month' => "Temmuz"],
-                            'img' => "img/blog/single_blog_5.png",
-                            'excerpt' => "Boşanma davalarındaki yeni uygulamalar ele alınıyor.",
-                            'author' => "Samet ATABAŞ",
-                            'comment_count' => 4
-                        ]
-                    ];
+                    // post değişkeni veriler.php içerisinden alınıyor                   
                      foreach($posts as $post) :
                     ?>
                     <article class="blog_item">
