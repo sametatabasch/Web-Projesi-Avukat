@@ -1,5 +1,5 @@
 <?php
-include_once "../veriler.php";
+include_once 'C:\wamp64\www\siteler\avukat.loc\veriler.php';
 ?>
     <!--================Blog Area =================-->
     <section class="blog_area section-padding">
