@@ -14,7 +14,7 @@
                     $posts = [
                         [
                             'link'=>"/?sayfa=blog_tek&id=1",
-                            'title' => "Tutuklamalar",
+                            'title' => "Eğlence Kanunu Düzenlendi",
                             'date' => ['day' => 15, 'month' => "Mart"],
                             'img' => "img/blog/single_blog_1.png",
                             'excerpt' => "Yazının özetini burada yazarsın artık.",
@@ -23,7 +23,7 @@
                         ],
                         [
                             'link'=>"/?sayfa=blog_tek&id=2",
-                            'title' => "Yeni Avukatlık Kanunu",
+                            'title' => "sosyal Medya Kanunu",
                             'date' => ['day' => 20, 'month' => "Nisan"],
                             'img' => "img/blog/single_blog_2.png",
                             'excerpt' => "Yeni Avukatlık Kanunu ile ilgili önemli değişiklikler burada.",

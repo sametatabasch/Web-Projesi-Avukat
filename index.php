@@ -17,7 +17,6 @@ $sayfa = $_GET['sayfa'] ?? "index";
 
 <?php
  include_once "tema/head.php";
-
 ?>
 
 <body>
@@ -32,8 +31,6 @@ $sayfa = $_GET['sayfa'] ?? "index";
     <!-- header-end -->
 
     <?php
-        
-        
         include_once SAYFALAR[$sayfa] ?? "sayfalar/bulunamadi.php";
     ?>
      
