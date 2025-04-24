@@ -1,5 +1,10 @@
 <?php
-include_once "../veriler.php";
+include_once 'C:\wamp64\www\siteler\avukat.loc\veriler.php';
+$id= $_GET['id'] ?? 1;
+$id--; // $id= $id-1 // Gelen id değerini dizinin index numarası olarak alacağımız için bir eksiltiyoruz. Çünkü index numaraları 0 dan başlar
+$post = $posts[$id]; 
+$prevPost=$posts[$id-1 < 0 ? 0 : $id-1];
+$nextPost=$posts[$id+1 > count($posts) ? count($posts)-1: $id+1];
 ?>
 <!--================Blog Area =================-->
 <section class="blog_area single-post-area section-padding">
@@ -8,23 +13,20 @@ include_once "../veriler.php";
          <div class="col-lg-8 posts-list">
             <div class="single-post">
                <div class="feature-img">
-                  <img class="img-fluid" src="img/blog/single_blog_1.png" alt="">
+                  <img class="img-fluid" src="<?=$post['img']?>" alt="">
                </div>
                <div class="blog_details">
-                  <h2>Second divided from form fish beast made every of seas
-                     all gathered us saying he our
+                  <h2><?=$post['title']?>
                   </h2>
                   <ul class="blog-info-link mt-3 mb-4">
-                     <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
-                     <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                     <li><a href="#"><i class="fa fa-user"></i> <?=$post['author']?></a></li>
+                     <li><a href="#"><i class="fa fa-comments"></i> <?=$post['comment_count']?> Yorum</a></li>
                   </ul>
-                  ...
+                  <?=$post['content']?>
                </div>
             </div>
             <div class="navigation-top">
                <div class="d-sm-flex justify-content-between text-center">
-                  <p class="like-info"><span class="align-middle"><i class="fa fa-heart"></i></span> Lily and 4
-                     people like this</p>
                   <div class="col-sm-4 text-center my-2 my-sm-0">
                      <!-- <p class="comment-count"><span class="align-middle"><i class="fa fa-comment"></i></span> 06 Comments</p> -->
                   </div>
@@ -41,27 +43,27 @@ include_once "../veriler.php";
                         class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
                         <div class="thumb">
                            <a href="#">
-                              <img class="img-fluid" src="img/post/preview.png" alt="">
+                              <img class="img-fluid" src="<?=$prevPost['img']?>" width="60px" alt="">
                            </a>
                         </div>
                         <div class="arrow">
-                           <a href="#">
+                           <a href="<?=$prevPost['link']?>">
                               <span class="lnr text-white ti-arrow-left"></span>
                            </a>
                         </div>
                         <div class="detials">
-                           <p>Prev Post</p>
-                           <a href="#">
-                              <h4>Space The Final Frontier</h4>
+                           <p>Önceki Yazı</p>
+                           <a href="<?=$prevPost['link']?>">
+                              <h4><?=$prevPost['title']?></h4>
                            </a>
                         </div>
                      </div>
                      <div
                         class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
                         <div class="detials">
-                           <p>Next Post</p>
-                           <a href="#">
-                              <h4>Telescopes 101</h4>
+                           <p>Sonraki Yazı</p>
+                           <a href="<?=$nextPost['link']?>">
+                              <h4><?=$nextPost['title']?></h4>
                            </a>
                         </div>
                         <div class="arrow">
@@ -70,8 +72,8 @@ include_once "../veriler.php";
                            </a>
                         </div>
                         <div class="thumb">
-                           <a href="#">
-                              <img class="img-fluid" src="img/post/next.png" alt="">
+                           <a href="<?=$nextPost['link']?>">
+                              <img class="img-fluid" src="<?=$nextPost['img']?>"  width="60px" alt="">
                            </a>
                         </div>
                      </div>
